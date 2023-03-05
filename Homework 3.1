@@ -1,0 +1,92 @@
+'''
+Angie Campos
+3/4/2023 
+Homework 3 
+'''
+#Project 1 
+'''
+Distance Traveled 
+ask for speed and hours for distance 
+display distance the vehicle traveled
+each hour of that time period
+'''
+#get user input 
+speed = int(input("What is the speed of the vehicle in mph?\n"))
+hours = int(input("How many hours has it traveled?\n"))
+
+#print the table headings 
+print('\nHour\tDistance traveled')
+print('--------------------------')
+
+#print the hours and distance traveled 
+for time in range(1,hours +1):
+    #Calculate Distance traveld 
+    distance = speed*time
+    print(f'{time}\t{distance}')
+    
+#works!
+
+#Project 2
+'''
+Average Rainfall
+nested loops, collect data
+calculate average rainfall over period of years
+inner loop iterate 12 times 
+Ask inches of rainfall for every 12 months 
+display total inches of rainfall 
+average rainfall per month 
+'''
+
+MONTHS_IN_YEAR = 12
+
+#get number of years 
+num_of_years = int(input('How many years long is your data?\n'))
+
+#Determine each years average rainfall 
+for years in range(num_of_years):
+    #initialize for number of years
+    total =0.0 
+    #Display the year number 
+    print(f'YEAR : {years+1}')
+    print('--------------------------')
+    
+    #Get inches of rainfall for every month 
+    for month in range(MONTHS_IN_YEAR):
+        print(f'inches of rainfall for month {month+1}',end='')
+        total_inches = float(input(': '))
+        
+        #add all total of inches 
+        total += total_inches
+    
+    #Calculate the average of rainfall per month 
+    average = total/MONTHS_IN_YEAR
+    
+    #Display the average
+    print(f'The total inches of rainfall per year {years+1}' f' is: {total}')
+    print(f'The average rainfall per year {years +1}' f' is: {average:.1f}')
+    print()
+
+#works!
+
+#Project 3 
+'''
+Sums of Numbers 
+ask user to enter a series of positive numbers 
+user input a negative number to end the series
+program should display the sum of the numbers 
+'''
+total =0.0 
+#Tell user directions 
+print('This program will calculate positive numbers.')
+print('If you wish to stop enter a negative number.\n')
+
+#User input 
+number = int(input('Enter a number: '))
+#while loop to use the >= 
+while number >=0:
+    total += number
+    number = int(input('Enter a number: '))
+#Print the total 
+print('\nThe total of all the numbers you entered is ',total)
+
+#works! 
